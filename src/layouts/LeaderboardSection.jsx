@@ -65,7 +65,7 @@ export default function LeaderboardSection() {
   const fetchLeaderboard = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("https://hachikoonsolv2-production.up.railway.app");
+      const res = await axios.get("https://hachikoonsolv2-production.up.railway.app/leaderboard");
       const entries = res.data.entries || [];
       // sort by amount descending just in case
       entries.sort((a, b) => (b.amount || 0) - (a.amount || 0));
@@ -86,7 +86,7 @@ export default function LeaderboardSection() {
   const refreshLeaderboard = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("https://hachikoonsolv2-production.up.railway.app/refresh");
+      const res = await axios.get("https://hachikoonsolv2-production.up.railway.app/leaderboard/refresh");
       // console.log("refresh response", res.data);
       if (res.data.refreshTime) {
         setRefreshTime(res.data.refreshTime.toString());
