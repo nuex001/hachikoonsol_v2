@@ -50,6 +50,11 @@ export default function StorySection() {
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </svg>
   );
+  const TelegramIcon = () => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9.993 15.673l-.398 4.335c.57 0 .817-.245 1.115-.54l2.675-2.56 5.548 4.062c1.017.56 1.739.266 1.993-.94l3.613-16.93.001-.001c.302-1.404-.507-1.953-1.49-1.585L1.34 9.27c-1.364.53-1.343 1.291-.232 1.637l5.645 1.762L19.86 4.72c.62-.38 1.183-.17.72.21" />
+    </svg>
+  );
 
   const DexIcon = () => (
     <img
@@ -158,7 +163,7 @@ export default function StorySection() {
         {/* Action Buttons Row */}
         <div className="flex flex-wrap items-center justify-center gap-4">
           {/* Buy on Pump.fun */}
-          <button
+          <a
             className="flex items-center gap-2 px-6 py-3 rounded-2xl text-base font-black tracking-wider transition-all duration-150 active:scale-95 hover:-translate-y-0.5"
             style={{
               fontFamily: "'Black Han Sans', 'Bangers', Impact, sans-serif",
@@ -168,13 +173,16 @@ export default function StorySection() {
               boxShadow: "3px 3px 0px #1a1a2e",
               letterSpacing: "0.08em",
             }}
+            href="https://pump.fun/coin/AsrtqZiNYt3c6nNCtkj7abUrVc8APsFF37Wffq45rkVh"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="text-lg">💊</span>
             BUY ON PUMP.FUN
-          </button>
+          </a>
 
           {/* DexScreener */}
-          <button
+          <a
             className="flex items-center gap-2 px-6 py-3 rounded-2xl text-base font-black tracking-wider transition-all duration-150 active:scale-95 hover:-translate-y-0.5"
             style={{
               fontFamily: "'Black Han Sans', 'Bangers', Impact, sans-serif",
@@ -184,13 +192,16 @@ export default function StorySection() {
               boxShadow: "3px 3px 0px #1a1a2e",
               letterSpacing: "0.08em",
             }}
+            href="https://dexscreener.com/solana/htg9w8npnc7auwkzcpfsu1gfwgfhs8odpvgrt3anddwx"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <DexIcon />
             DEXSCREENER
-          </button>
+          </a>
 
           {/* Community / X */}
-          <button
+          <a
             className="flex items-center gap-2 px-6 py-3 rounded-2xl text-base font-black tracking-wider transition-all duration-150 active:scale-95 hover:-translate-y-0.5"
             style={{
               fontFamily: "'Black Han Sans', 'Bangers', Impact, sans-serif",
@@ -200,10 +211,30 @@ export default function StorySection() {
               boxShadow: "3px 3px 0px #151515ff",
               letterSpacing: "0.08em",
             }}
+            href="https://twitter.com/i/communities/2026833782444277974"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <XIcon />
             COMMUNITY
-          </button>
+          </a>
+          <a
+            className="flex items-center gap-2 px-6 py-3 rounded-2xl text-base font-black tracking-wider transition-all duration-150 active:scale-95 hover:-translate-y-0.5"
+            style={{
+              fontFamily: "'Black Han Sans', 'Bangers', Impact, sans-serif",
+              background: "#229ED9",
+              color: "#fff",
+              border: "3px solid #229ED9",
+              boxShadow: "3px 3px 0px #151515ff",
+              letterSpacing: "0.08em",
+            }}
+            href="https://t.me/hachikoogcto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TelegramIcon />
+            COMMUNITY
+          </a>
         </div>
       </div>
     </motion.section>

@@ -17,3 +17,4 @@ If you are developing a production application, we recommend using TypeScript wi
 # hachikoonsol_v2
 # hachikoonsol_v2
 # hachikoonsol_v2
+# hachikoonsol_v2
