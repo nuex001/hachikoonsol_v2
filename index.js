@@ -21,7 +21,9 @@ const HELIUS_URL = process.env.HELIUS_URL;
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173", // 2. Whitelist your frontend URL
+    origin: ['https://hachikoonsol.com', 
+        // "http://localhost:5173"
+    ], 
   }),
 );
 
