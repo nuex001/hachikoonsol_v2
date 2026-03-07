@@ -114,6 +114,13 @@ const loadLeaderboard = async () => {
     },
   );
 
+  // sort by holdingDays descending, nulls/undefined last
+  holdersWithDates.sort((a, b) => {
+    const da = a.holdingDays == null ? -1 : a.holdingDays;
+    const db = b.holdingDays == null ? -1 : b.holdingDays;
+    return db - da;
+  });
+
   return holdersWithDates;
 };
 
@@ -121,16 +128,10 @@ const loadLeaderboard = async () => {
 const updateLeaderboard = async () => {
   try {
     const data = await loadLeaderboard();
-    console.log("Fetched leaderboard data:", data);
-    const sortedData = data.sort((a, b) => {
-      const daysA = a.holdingDays ?? -1;
-      const daysB = b.holdingDays ?? -1;
-      return daysB - daysA;
-    });
     // upsert a single document so we always have just one leaderboard
     await Leaderboard.findOneAndUpdate(
       {},
-      { entries: sortedData, fetchedAt: new Date() },
+      { entries: data, fetchedAt: new Date() },
       { upsert: true, new: true },
     );
     console.log("Leaderboard updated with", data.length, "entries");
