@@ -67,8 +67,8 @@ export default function LeaderboardSection() {
     try {
       const res = await axios.get("https://hachikoonsolv2-production.up.railway.app/leaderboard");
       const entries = res.data.entries || [];
-      // sort by amount descending just in case
-      entries.sort((a, b) => (b.amount || 0) - (a.amount || 0));
+      // sort by holdingDays descending so front-end respects server ordering
+      entries.sort((a, b) => (b.holdingDays || 0) - (a.holdingDays || 0));
       const mapped = entries.map((e, i) => ({
         rank: i + 1,
         wallet: e.wallet,
