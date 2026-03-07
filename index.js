@@ -22,7 +22,7 @@ const app = express();
 app.use(
   cors({
     origin: ['https://hachikoonsol.com', 
-        "http://localhost:5173"
+        // "http://localhost:5173"
     ], 
   }),
 );
