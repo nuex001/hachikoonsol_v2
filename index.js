@@ -121,10 +121,16 @@ const loadLeaderboard = async () => {
 const updateLeaderboard = async () => {
   try {
     const data = await loadLeaderboard();
+    console.log("Fetched leaderboard data:", data);
+    const sortedData = data.sort((a, b) => {
+      const daysA = a.holdingDays ?? -1;
+      const daysB = b.holdingDays ?? -1;
+      return daysB - daysA;
+    });
     // upsert a single document so we always have just one leaderboard
     await Leaderboard.findOneAndUpdate(
       {},
-      { entries: data, fetchedAt: new Date() },
+      { entries: sortedData, fetchedAt: new Date() },
       { upsert: true, new: true },
     );
     console.log("Leaderboard updated with", data.length, "entries");
