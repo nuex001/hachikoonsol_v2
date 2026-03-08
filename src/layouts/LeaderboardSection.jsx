@@ -364,43 +364,43 @@ const truncate = (addr, length = 12) => {
             <table className="w-full">
               <thead>
                 <tr className="border-b-[2px] border-black bg-[#FFF9C4]">
-                  <th className="py-2 px-4 text-left font-display text-sm tracking-wider uppercase">
+                  <th className="py-1 md:py-2 px-2 md:px-4 text-left font-display text-xs md:text-sm tracking-wider uppercase">
                     Rank
                   </th>
-                  <th className="py-2 px-4 text-left font-display text-sm tracking-wider uppercase">
+                  <th className="py-1 md:py-2 px-2 md:px-4 text-left font-display text-xs md:text-sm tracking-wider uppercase">
                     Wallet
                   </th>
-                  <th className="py-2 px-4 text-right font-display text-sm tracking-wider uppercase">
+                  <th className="py-1 md:py-2 px-2 md:px-4 text-right font-display text-xs md:text-sm tracking-wider uppercase">
                     Balance
                   </th>
-                  <th className="py-2 px-4 text-right font-display text-sm tracking-wider uppercase">
+                  <th className="py-1 md:py-2 px-2 md:px-4 text-right font-display text-xs md:text-sm tracking-wider uppercase">
                     Holding Time
                   </th>
                 </tr>
               </thead>
-              <tbody className="font-body font-bold text-sm">
+              <tbody className="font-body font-bold text-xs md:text-sm">
                 {filteredTable.map((row, index) => (
                   <tr
                     key={row.rank}
                     className={`border-t border-black/10 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
                   >
-                    <td className="py-2.5 px-4 font-display text-base">
+                    <td className="py-1.5 md:py-2.5 px-2 md:px-4 font-display text-xs md:text-base">
                       #{row.rank}
                     </td>
-                    <td className="py-2.5 px-4">
+                    <td className="py-1.5 md:py-2.5 px-2 md:px-4">
                       <a
                         href={`https://solscan.io/account/${row.full}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#4CAF50] hover:underline font-mono"
+                        className="text-[#4CAF50] hover:underline font-mono text-xs md:text-sm"
                       >
-                        {truncate(row.wallet, 15)}
+                        {truncate(row.wallet, 12)}
                       </a>
                     </td>
-                    <td className="py-2.5 px-4 text-right font-display text-sm tracking-wider uppercase">
+                    <td className="py-1.5 md:py-2.5 px-2 md:px-4 text-right font-display text-xs md:text-sm tracking-wider uppercase">
                       {row.balance}
                     </td>
-                    <td className="py-2.5 px-4 text-right font-display text-sm tracking-wider uppercase text-[#4CAF50]">
+                    <td className="py-1.5 md:py-2.5 px-2 md:px-4 text-right font-display text-xs md:text-sm tracking-wider uppercase text-[#4CAF50]">
                       {row.time}
                     </td>
                   </tr>
