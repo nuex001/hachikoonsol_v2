@@ -95,9 +95,17 @@
   font-family: 'Nunito', sans-serif;
 }
 
-.text-stroke {
+/* .text-stroke {
   -webkit-text-stroke: 3px black;
   paint-order: stroke fill;
+} */
+
+.text-stroke {
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
 }
 
 .text-stroke-sm {
@@ -109,6 +117,8 @@
   -webkit-text-stroke: 1px black;
   paint-order: stroke fill;
 }
+
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
