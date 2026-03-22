@@ -6,6 +6,7 @@ import KeyMomentsSection from '../layouts/KeyMomentsSection';
 import VisitStreakSection from '../layouts/VisitStreakSection';
 import LeaderboardSection from '../layouts/LeaderboardSection';
 import bg from '../assets/images/bg.png';
+import StakeSection from '../layouts/StakeSection';
 
 
 export default function Home() {
@@ -27,10 +28,10 @@ export default function Home() {
       <div className="relative z-10 container mx-auto px-4 pb-32 flex flex-col gap-24 md:gap-32 items-center max-w-6xl">
         <TimelineSection/>
         <StorySection />
+        <StakeSection/>
         <KeyMomentsSection />
         <VisitStreakSection />
         <LeaderboardSection />
-
       </div>
     </div>
   );

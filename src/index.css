@@ -137,3 +137,29 @@
 .animate-bounce-arrow {
   animation: bounce-arrow 1.5s ease-in-out infinite;
 }
+
+.stakeIframe{
+  width: 100%;
+  /* max-width: 420px; */
+  height: 700px;
+  border: none;
+  border-radius: 12px;
+  background: transparent !important;
+}
+.stakeIframe body{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: transparent !important;
+}
+
+@media (max-width:780px) {
+  .stakeIframe{
+  width: 100%;
+  /* max-width: 420px; */
+  height: 500px;
+  border: none;
+  border-radius: 12px;
+  background: transparent !important;
+}
+}
