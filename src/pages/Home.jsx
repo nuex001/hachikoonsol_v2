@@ -28,8 +28,8 @@ export default function Home() {
       <div className="relative z-10 container mx-auto px-4 pb-32 flex flex-col gap-24 md:gap-32 items-center max-w-6xl">
         <TimelineSection/>
         <StorySection />
-        <StakeSection/>
         <KeyMomentsSection />
+        <StakeSection/>
         <VisitStreakSection />
         <LeaderboardSection />
       </div>
