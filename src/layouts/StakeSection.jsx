@@ -10,7 +10,7 @@ function StakeSection() {
         viewport={{ once: true }}
         className="text-7xl md:text-9xl text-center text-white text-stroke mb-16 drop-shadow-[6px_6px_0_#000] font-display transform rotate-1 tracking-wider"
       >
-        Stake Hachi
+        STAKE $HACHIKO
       </motion.h2>
             <iframe
                 src="https://rflx.fi/embed?mint=AsrtqZiNYt3c6nNCtkj7abUrVc8APsFF37Wffq45rkVh"
