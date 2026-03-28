@@ -12,12 +12,12 @@ function StakeSection() {
       >
         STAKE $HACHIKO
       </motion.h2>
-            {/* <iframe
+            <iframe
                 src="https://rflx.fi/embed?mint=AsrtqZiNYt3c6nNCtkj7abUrVc8APsFF37Wffq45rkVh"
                 width="100%"
                 className='stakeIframe'
                 allow="clipboard-write"
-            ></iframe> */}
+            ></iframe>
             
         </section>
     )
